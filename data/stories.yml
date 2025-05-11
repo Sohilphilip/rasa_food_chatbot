@@ -1,0 +1,207 @@
+version: "3.1"
+
+stories:
+
+- story: fetch_cuisiene_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_cuisine_info
+    entities:
+    - Cuisine Type: "Indian"
+  - slot_was_set:
+    - Cuisine Type: "Indian"
+  - action: action_fetch_cuisiene_data
+
+- story: fetch_calories_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_calories_info
+    entities:
+    - Calories1: "500"
+  - slot_was_set:
+    - Calories1: "500"
+  - action: action_fetch_calories_data
+
+- story: fetch_price_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_price_info
+    entities:
+    - Price1: "300"
+  - slot_was_set:
+    - Price1: "300"
+  - action: action_fetch_price_data
+
+- story: fetch_nutrient_data_from_api_call
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_nutrients_info
+  - action: utter_Food_Nutrients
+  - intent: provides_food_name
+    entities:
+    - Food Name: "Briyani"
+  - slot_was_set:
+    - Food Name: "Briyani"
+  - action: action_fetch_food_nutrient_data
+
+- story: fetch_btw_calories_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_btw_calories_info
+    entities:
+    - Calories1: "400"
+    - Calories2: "500"
+  - slot_was_set:
+    - Calories1: "400"
+    - Calories2: "500"
+  - action: action_fetch_btw_calories_data
+
+- story: fetch_btw_price_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_btw_price_info
+    entities:
+    - Price1: "500"
+    - Price2: "600"
+  - slot_was_set:
+    - Price1: "500"
+    - Price2: "600"
+  - action: action_fetch_btw_price_data
+
+- story: fetch_btw_calories_btw_price_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_btw_calories_btw_price_info
+    entities:
+    - Calories1: "400"
+    - Calories2: "300"
+    - Price1: "500"
+    - Price2: "600"
+  - slot_was_set:
+    - Calories1: "400"
+    - Calories2: "300"
+    - Price1: "500"
+    - Price2: "600"
+  - action: action_fetch_btw_calories_btw_price_data
+
+- story: fetch_main_nutrient_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_main_nutrient_info
+    entities:
+    - Main Nutrient: "Protein"
+  - slot_was_set:
+    - Main Nutrient: "Protein"
+  - action: action_fetch_main_nutrient_data
+
+- story: fetch_cuisine_price_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_cuisine_price_info
+    entities:
+    - Cuisine Type: "Indian"
+    - Price1: "500"
+  - slot_was_set:
+    - Cuisine Type: "Indian"
+    - Price1: "500"
+  - action: action_fetch_cuisine_price_data
+
+- story: fetch_cuisine_btw_price_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_cuisine_btw_price_info
+    entities:
+    - Cuisine Type: "Indian"
+    - Price1: "500"
+    - Price2: "400"
+  - slot_was_set:
+    - Cuisine Type: "Indian"
+    - Price1: "500"
+    - Price2: "400"
+  - action: action_fetch_cuisine_btw_price_data
+
+- story: fetch_cuisine_calories_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_cuisine_calories_info
+    entities:
+    - Cuisine Type: "Indian"
+    - Calories1: "400"
+  - slot_was_set:
+    - Cuisine Type: "Indian"
+    - Calories1: "400"
+  - action: action_fetch_cuisine_calories_data
+
+- story: fetch_cuisine_btw_calories_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_cuisine_btw_calories_info
+    entities:
+    - Cuisine Type: "Indian"
+    - Calories1: "400"
+    - Calories2: "300"
+  - slot_was_set:
+    - Cuisine Type: "Indian"
+    - Calories1: "400"
+    - Calories2: "300"
+  - action: action_fetch_cuisine_btw_calories_data
+
+- story: fetch_cuisine_btw_calories_btw_price_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_cuisine_btw_calories_btw_price_info
+    entities:
+    - Cuisine Type: "Indian"
+    - Calories1: "400"
+    - Calories2: "300"
+    - Price1: "200"
+    - Price2: "100"
+  - slot_was_set:
+    - Cuisine Type: "Indian"
+    - Calories1: "400"
+    - Calories2: "300"
+    - Price1: "200"
+    - Price2: "100"
+  - action: action_fetch_cuisine_btw_calories_btw_price_data
+
+- story: fetch_main_nutrient_btw_price_data_from_excel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_Food_Name
+  - intent: fetch_main_nutrient_btw_price_info
+    entities:
+    - Main Nutrient: "Briyani"
+    - Price1: "100"
+    - Price2: "200"
+  - slot_was_set:
+    - Main Nutrient: "Briyani"
+    - Price1: "100"
+    - Price2: "200"
+  - action: action_fetch_main_nutrient_btw_price_data

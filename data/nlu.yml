@@ -1,0 +1,295 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+
+# entities : Food Name , Cuisine Type , Calories , Price , Food Time , Food Category ,Main Nutrient
+
+- intent: fetch_cuisine_info
+  examples: |
+    - I want to know [Indian](Cuisine Type) foods to try out
+    - Tell me some [French](Cuisine Type) foods to try out
+
+- intent: fetch_calories_info
+  examples: |
+    - I want to know foods that have [500](Calories1) Calories
+    - Tell me some foods that have [300](Calories1) Calories
+
+- intent: fetch_price_info
+  examples: |
+    - I want to know foods that cost [500](Price1) ruppeees
+    - Tell me some foods that cost [300](Price1) ruppees
+
+- intent: fetch_nutrients_info
+  examples: |
+    - i want to know the nutritional value of food
+    - give a details about food
+    - what are the nutrients present in food
+    - i want to know the calorie content in food
+    - i want to know the protein content in food
+    - i want to know the carbohydrate content in food
+    - i want to know the fat content in food
+    - i want to know the fibre content in food
+    - i want to know the suger content in food
+    - i want to know the sodium content in food
+    - i want to know the potassium content in food 
+    - give me details about food
+    - i want to know wheather this foods is healthy to eat
+
+- intent: provides_food_name
+  examples: |
+    - [Biryani](Food Name)
+    - [Sushi](Food Name)
+    - [Pizza](Food Name)
+    - [Guacamole](Food Name)
+    - [Chicken Tikka](Food Name)
+    - [Salad](Food Name)
+    - [Ice Cream](Food Name)
+    - [Lentil Soup](Food Name)
+    - [BBQ Ribs](Food Name)
+    - [Pasta](Food Name)
+    - [Stir-Fry](Food Name)
+    - [Pancakes](Food Name)
+    - [Tacos](Food Name)
+    - [Caesar Salad](Food Name)
+    - [Miso Soup](Food Name)
+    - [Hamburger](Food Name)
+    - [Pad Thai](Food Name)
+    - [Falafel](Food Name)
+    - [Fish](Food Name)
+    - [Chips](Food Name)
+    - [Apple Pie](Food Name)
+    - [Lasagna](Food Name)
+    - [Pho](Food Name)
+    - [Croissant](Food Name)
+    - [Muffin](Food Name)
+    - [Chicken Wings](Food Name)
+    - [Burrito](Food Name)
+    - [Risotto](Food Name)
+    - [Gyoza](Food Name)
+    - [Chicken Curry](Food Name)
+    - [Tiramisu](Food Name)
+    - [Nachos](Food Name)
+    - [Quiche](Food Name)
+    - [Shrimp Scampi](Food Name)
+    - [Chow Mein](Food Name)
+    - [Omelette](Food Name)
+    - [Beef Stroganoff](Food Name)
+    - [Scones](Food Name)
+    - [Fried Rice](Food Name)
+    - [Lobster Roll](Food Name)
+    - [Ratatouille](Food Name)
+    - [Beef Wellington](Food Name)
+    - [Margherita Pizza](Food Name)
+    - [Goulash](Food Name)
+    - [Bagel](Food Name)
+    - [Gyro](Food Name)
+    - [Croque Monsieur](Food Name)
+    - [Macaroni and Cheese](Food Name)
+    - [Caesar Wrap](Food Name)
+    - [Fried Chicken](Food Name)
+    - [Shepherd's Pie](Food Name)
+    - [Croissant Sandwich](Food Name)
+    - [Clam Chowder](Food Name)
+    - [Beef Tacos](Food Name)
+    - [Falafel Wrap](Food Name)
+    - [Hot Dog](Food Name)
+    - [Tandoori Chicken](Food Name)
+    - [Lamb Curry](Food Name)
+    - [Eggplant Parmesan](Food Name)
+    - [Crab Cakes](Food Name)
+    - [Ceviche](Food Name)
+    - [Beef Bulgogi](Food Name)
+    - [Egg Drop Soup](Food Name)
+    - [Tuna Salad](Food Name)
+    - [Beef Brisket](Food Name)
+    - [Cabbage Rolls](Food Name)
+    - [Crab Legs](Food Name)
+    - [Chicken Alfredo](Food Name)
+    - [Beef Bourguignon](Food Name)
+    - [Egg Fried Rice](Food Name)
+    - [Crab Rangoon](Food Name)
+    - [Pulled Pork Sandwich](Food Name)
+    - [Gazpacho](Food Name)
+    - [Fish Tacos](Food Name)
+    - [Lobster Bisque](Food Name)
+    - [Beef Carpaccio](Food Name)
+    - [Teriyaki Chicken](Food Name)
+    - [Gyudon](Food Name)
+    - [Paella](Food Name)
+    - [Butter Chicken](Food Name)
+    - [Croque Madame](Food Name)
+    - [Dosa](Food Name)
+    - [Bulgogi](Food Name)
+    - [Kung Pao Chicken](Food Name)
+    - [Hummus](Food Name)
+    - [Tortilla Soup](Food Name)
+    - [Naan](Food Name)
+    - [Bibimbap](Food Name)
+    - [Mapo Tofu](Food Name)
+    - [Tom Yum Soup](Food Name)
+    - [Tempura](Food Name)
+    - [Baba Ganoush](Food Name)
+    - [Tabbouleh](Food Name)
+    - [Pasta Primavera](Food Name)
+    - [Samosa](Food Name)
+    - [Bulgogi Jeon](Food Name)
+    - [Wontons](Food Name)
+    - [Green Curry](Food Name)
+    - [Baklava](Food Name)
+    - [Quesadilla](Food Name)
+    - [Tikka Masala](Food Name)
+    - [Bibimbap Dolsot](Food Name)
+    - [Kung Pao Tofu](Food Name)
+    - [Tom Kha Gai](Food Name)
+    - [Yakitori](Food Name)
+    - [Muhammara](Food Name)
+    - [Enchiladas](Food Name)
+    - [Fattoush](Food Name)
+    - [Ramen](Food Name)
+    - [Penang Curry](Food Name)
+    - [Moussaka](Food Name)
+    - [Falafel Pita](Food Name)
+    - [Carnitas Tacos](Food Name)
+    - [Caprese Salad](Food Name)
+    - [Bibimbap](Food Name)
+    - [Peking Duck Pancakes](Food Name)
+    - [Khao Pad Sapparod](Food Name)
+    - [Vindaloo Curry](Food Name)
+    - [Tonkatsu Ramen](Food Name)
+    - [Labneh](Food Name)
+    - [Chimichanga](Food Name)
+    - [Fattoush Salad](Food Name)
+    - [Grilled Chicken](Food Name)
+    - [Cacio e Pepe](Food Name)
+    - [Peking Duck](Food Name)
+    - [Bulgogi Bowl](Food Name)
+    - [Green Papaya Salad](Food Name)
+    - [Edamame](Food Name)
+    - [Baba Ghanoush Wrap](Food Name)
+    - [Chicken Enchiladas](Food Name)
+    - [Couscous](Food Name)
+    - [Arancini](Food Name)
+    - [Laksa](Food Name)
+    - [Dosas](Food Name)
+    - [Masala Dosa](Food Name)
+    - [Japchae](Food Name)
+    - [Kung Pao Chicken](Food Name)
+    - [Tom Yum Goong](Food Name)
+    - [Tempura Udon](Food Name)
+    - [Halloumi Wrap](Food Name)
+    - [Tabbouleh Salad](Food Name)
+    - [Bulgogi Kimchi Jeon](Food Name)
+    - [Gnocchi](Food Name)
+    - [Udon](Food Name)
+    - [Kimchi](Food Name)
+    - [Pad See Ew](Food Name)
+    - [Vindaloo](Food Name)
+    - [Pizza](Food Name)
+
+- intent: fetch_btw_calories_info
+  examples: |
+    - I want to know foods that range between [100](Calories1) to [200](Calories2) calories
+    - Tell me some foods that range between [500](Calories1) to [700](Calories2) calories
+    - Suggest me foods that range between [300](Calories1) to [200](Calories2) calories
+
+- intent: fetch_btw_price_info
+  examples: |
+    - I want to know foods that range between [100](Price1) to [200](Price2) rupees
+    - Tell me some foods that range between [500](Price1) to [700](Price2) ruppees
+    - Suggest me foods that range between [300](Price1) to [200](Price2) ruppees
+
+- intent: fetch_btw_calories_btw_price_info
+  examples: |
+    - I want to know foods that range between [100](Calories1) to [200](Calories2) calories and costs between [300](Price1) to [700](Price2) rupees 
+    - Tell me some foods that range between [500](Calories1) to [700](Calories2) calories and costs between [100](Price1) to [300](Price2) rupees
+    - Suggest me foods that range between [300](Calories1) to [200](Calories2) calories and costs between [500](Price1) to [1000](Price2) rupees
+
+- intent: fetch_main_nutrient_info
+  examples: |
+    - I want to know foods that have good amount of [Protein](Main Nutrient) present
+    - Tell me some foods that have good amount of [Carbohydrate](Main Nutrient) present
+    - Suggest me foods that have good amount of [Fat](Main Nutrient) present
+
+- intent: fetch_cuisine_price_info
+  examples: |
+    - I want to know [Indian](Cuisine Type) foods that costs [200](Price1) rupees
+    - Tell me some [French](Cuisine Type) foods that costs [300](Price1) rupees
+    - Suggest me [Italian](Cuisine Type) foods that costs [500](Price1) rupees
+
+- intent: fetch_cuisine_btw_price_info
+  examples: |
+    - I want to know [Indian](Cuisine Type) foods that costs between [100](Price1) to [200](Price2) rupees
+    - Tell me some [French](Cuisine Type) foods that costs between [500](Price1) to [700](Price2) rupees
+    - Suggest me [Italian](Cuisine Type) foods that costs between [300](Price1) to [200](Price2) rupees
+
+- intent: fetch_cuisine_calories_info
+  examples: |
+    - I want to know foods [Indian](Cuisine Type) that have [100](Calories1) calories
+    - Tell me some foods [French](Cuisine Type) that have [500](Calories1) calories
+    - Suggest me foods [Italian](Cuisine Type) that have [300](Calories1) calories
+
+- intent: fetch_cuisine_btw_calories_info
+  examples: |
+    - I want to know foods [Indian](Cuisine Type) that range between [100](Calories1) to [200](Calories2) calories
+    - Tell me some foods [French](Cuisine Type) that range between [500](Calories1) to [700](Calories2) calories
+    - Suggest me foods [Italian](Cuisine Type) that range between [300](Calories1) to [200](Calories2) calories
+
+- intent: fetch_cuisine_btw_calories_btw_price_info
+  examples: |
+    - I want to know [Indian](Cuisine Type) foods that range between [100](Calories1) to [200](Calories2) calories and costs between [100](Price1) to [300](Price2) rupees
+    - Tell me some [French](Cuisine Type) foods that range between [500](Calories1) to [700](Calories2) calories and costs between [300](Price1) to [500](Price2) rupees
+    - Suggest me foods [Italian](Cuisine Type) that range between [300](Calories1) to [200](Calories2) calories and costs between [500](Price1) to [1000](Price2) rupees
+
+- intent: fetch_main_nutrient_btw_price_info
+  examples: |
+    - I want to know foods that have [Protein](Main Nutrient) costs between [500](Price1) to [1000](Price2) rupees
+    - Tell me some foods that have [Protein](Main Nutrient) costs between [100](Price1) to [300](Price2) rupees
+    - Suggest me foods that have [Carbohydrate](Main Nutrient) costs between [300](Price1) to [700](Price2) rupees

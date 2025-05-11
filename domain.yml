@@ -1,0 +1,125 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - fetch_cuisine_info
+  - fetch_calories_info
+  - fetch_price_info
+  - fetch_nutrients_info
+  - provides_food_name
+  - fetch_btw_calories_info
+  - fetch_btw_price_info
+  - fetch_btw_calories_btw_price_info
+  - fetch_main_nutrient_info
+  - fetch_cuisine_price_info
+  - fetch_cuisine_btw_price_info
+  - fetch_cuisine_calories_info
+  - fetch_cuisine_btw_calories_info
+  - fetch_cuisine_btw_calories_btw_price_info
+  - fetch_main_nutrient_btw_price_info
+
+entities:
+  - Food Name
+  - Cuisine Type
+  - Calories1
+  - Calories2
+  - Price1
+  - Price2
+  - Main Nutrient
+
+slots:
+  Food Name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Food Name
+  Cuisine Type:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Cuisine Type
+  Calories1:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Calories1
+  Calories2:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Calories2
+  Price1:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Price1
+  Price2:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Price2
+  Main Nutrient:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Main Nutrient
+  
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_Food_Name:
+  - text: "Hi! How may i help you to reccomend food of your liking?"
+
+  utter_Food_Nutrients:
+  - text: "Please enter the name of the food whoose Nutrient Information you desire"
+  
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+- action_fetch_cuisiene_data
+- action_fetch_calories_data
+- action_fetch_price_data
+- action_fetch_btw_calories_data
+- action_fetch_btw_price_data
+- action_fetch_btw_calories_btw_price_data
+- action_fetch_food_nutrient_data
+- action_fetch_main_nutrient_data
+- action_fetch_cuisine_price_data
+- action_fetch_cuisine_btw_price_data
+- action_fetch_cuisine_calories_data
+- action_fetch_cuisine_btw_calories_data
+- action_fetch_cuisine_btw_calories_btw_price_data
+- action_fetch_main_nutrient_btw_price_data
